@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            scroll-behavior: smooth;
+            outline: none;
+            font-family: "Poppins", sans-serif;
+        }
+        :root {
+            --bg-color: #081b29;
+            --text-color: #ededee;
+            --main-color: #00abf0;
+        }
+        body {
+            background-color: beige;
+            color: #000;
+        }
+        .portfolio-header {
+            position: fixed;
+            top: 10px;
+            left: 20px;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--main-color);
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 2rem 0;
+        }
+        .projects-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+        .projects-list li {
+            flex: 1;
+            text-align: center;
+        }
+        .projects-list li a :hover {
+            color: white;
+            border: 1px solid black;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 0 2rem;
+        }
+        .projects-grid .project-item {
+            position: relative;
+            border: 1px solid black;
+            transition: background-color 0.3s ease;
+        }
+        .projects-grid{
+            margin-left: 70px;
+            margin-right: 70px;
+            height: 250px;
+        }
+        .projects-grid .project-item img {
+            width: 100%;
+            display: block;
+            height: 250px;
+        }
+        .projects-grid .project-item:hover {
+            background-color: black;
+        }
+        .projects-grid .project-item:hover .overlay {
+            opacity: 1;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .overlay p {
+            color: white;
+            font-size: 1.6rem;
+        }
+        .main-section {
+            text-align: center;
+            padding: 50px 0;
+        }
+        .main-section a {
+            text-decoration: none;
+            margin: 0;
+            color: #fff;
+            font-size: 18px;
+            border: 1px solid #000;
+            padding: 5px 20px;
+            background-color: #000;
+        }
+        span{
+            color: var(--main-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-header">My <span>Portfolio</span></div>
+    <!-- Partie Projet -->
+    <section class="projects">
+        <h1 class="section-title">Projets</h1>
+        <ul class="projects-list">
+            <li><a href="tout_projet.html">Tous</a></li>
+            <li><a href="groupe.html">Groupe</a></li>
+            <li><a href="groupe.html">Projet Personelle</a></li>
+            <li><a href="jeux.html">Jeux</a></li>
+        </ul>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro1.png" alt="Project 1">
+                <div class="overlay"><p>Texte du projet 1</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro2.png" alt="Project 2">
+                <div class="overlay"><p>Texte du projet 2</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro3.png" alt="Project 3">
+                <div class="overlay"><p>Soleil de minuit</p></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro5.png" alt="Project 4">
+                <div class="overlay"><p>Mes citations</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro6.png" alt="Project 5">
+                <div class="overlay"><p>Projet e-commerce</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro7.png" alt="Project 6">
+                <div class="overlay"><p>My futur company</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro8.png" alt="Project 6">
+                <div class="overlay"><p>My futur company</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro9.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de fruits</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro10.png" alt="Project 6">
+                <div class="overlay"><p>Jeux Manga</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro11.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de puzzle de mot</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro12.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de mot croisé</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro17.png" alt="Project 6">
+                <div class="overlay"><p>Quiz de prog</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro13.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de piano</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro18.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de Mot Manga</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro14.png" alt="Project 6">
+                <div class="overlay"><p>Site de poéme & poésie page a propos</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro15.png" alt="Project 6">
+                <div class="overlay"><p>Site de poéme & poésie Accueil</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro16.png" alt="Project 6">
+                <div class="overlay"><p>Site de poéme & poésie Accueil</p></div>
+            </div>
+        </div>
+    </section>
+    <br><br><br><br><br>
+    <!--<div class="main-section">
+        <a href="#">Voir Plus</a><br><br>
+    </div>-->
+</body>
+</html>

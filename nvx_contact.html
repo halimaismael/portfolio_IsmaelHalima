@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            /*background-image: url(poemee.png);
+            background-size: cover;*/
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            margin-top: 100px;
+            text-align: center;
+        }
+
+        .image img {
+            margin-top: -90px;
+            border: 1px solid black;
+            height: 550px;
+            float: left;
+            margin-left: -290px;
+        }
+        .image2 img {
+            border-radius: 15px;
+            float: right;
+            margin-left: 250px;
+        }
+
+        .form-section {
+            margin-left: 250px;
+            margin-right: 10px;
+            max-width: 500px;
+        }
+        .form-section p {
+            font-style: oblique;
+            text-align: left; /* Align text to the left */
+            width: 450px; /* Make the width of the <p> match the width of the input */
+            margin: 0 0 5px 0; /* Add some space below each <p> */
+        }
+
+        .form-section h1 {
+            text-align: center;
+        }
+
+        .form-section form {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align form fields horizontally */
+        }
+
+        .form-section form input , 
+        .form-section form textarea {
+             /* Adjusted width to 90% */
+            width: 450px; /* Ensure it doesn't exceed the form-section width */
+            margin-bottom: 20px;
+            padding: 15px; /* Increased padding for larger input fields */
+            border: 1px solid #000;
+        }
+
+        .form-section form button {
+            
+            background-color: #1e90ff; /* Bleu de mer */
+            color: white;
+            border: none;
+            font-size: 15px;
+            padding: 5px 20px;
+            text-decoration: none;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .form-section form button:hover {
+            background-color: #0073e6; /* Bleu plus foncé */
+        }
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: 0;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .icon {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="image">
+            <img src="img/img.jpeg" alt="Image de fleur">
+        </div>
+        <div class="form-section">
+            <p>Me Contacter</p>
+            <h1>Contact</h1>
+            <form>
+                <p>Nom : </p>
+                <input type="text" name="nom" placeholder="Halima" required>
+                <p>Mail : </p>
+                <input type="email" name="email" placeholder="exemple@gmail.com" required>
+                <p>Message :</p>
+                <textarea name="message" placeholder="Votre message içi" rows="5" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+    </main>
+<div class="icon">
+    <p><ion-icon name="mail-outline" style="font-size: 30px;"></ion-icon> : moinahalima2023@gmail.com</p>
+    <a href="#"><ion-icon name="logo-linkedin" style="font-size: 30px;"></ion-icon></a>
+</div>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2787.0648699689124!2d4.795735315751905!3d45.77967547910667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4c0791b4b9141%3A0x408ab2ae4bb3280!2sLa%20Duch%C3%A8re%2C%20Lyon%2C%20France!5e0!3m2!1sen!2sus!4v1620227117741!5m2!1sen!2sus" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
