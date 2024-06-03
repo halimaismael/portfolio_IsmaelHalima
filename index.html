@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: Arial, sans-serif;
+    /*background-image: url(cpn2.jpeg);
+    background-size: cover;*/
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 50px;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+nav ul li::after {
+    content: "|";
+    color: white;
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+nav ul li:last-child::after {
+    content: "";
+}
+
+nav ul li a {
+    font-style: italic;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+/* Main Content */
+main {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.image-container img {
+    margin-top: -250px;
+    margin-left: 70px;
+    border-radius: 90%;
+    max-width: 200px;
+}
+.h1p{
+    font-style: italic;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+.h1p a{
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
+.line-and-text {
+    flex: 3;
+    position: relative;
+    padding-left: 20px;
+}
+
+.line-and-text hr {
+    position: absolute;
+    top: -30px;
+    left: -100px;
+    width: calc(120% - 100px);
+}
+
+
+.line-and-text h2 {
+    margin-top: 30px;
+}
+
+.line-and-text p {
+    margin-top: 5px;
+}
+
+.line-and-text a {
+    text-decoration:none ;
+    padding: 5px 10px;
+    border: 1px solid black;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 50px;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+.image{
+    float: right;margin-top: -1240px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul li {
+    margin-left: 50px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+#bgVideo {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}   .text-animate{
+            position: relative;
+            width: 32.8rem;
+        }
+        
+        .h1p .text-animate h3{
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: .7px var(--main-color);
+            background: url("cyan2.jpg") ;
+            -webkit-background-clip:text  ;
+            background-position: 0 0;
+            animation: animate 5s linear 2s infinite alternate;
+        }
+        @keyframes animate{
+        100%{
+            background-position: -500px 0;
+        }}
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+        .vertical-line {
+            margin-top: 100px; /* Ajout d'une marge en haut */
+            height: 100%; /* Réduction de la hauteur pour compenser la marge */
+            width: 2px;
+            background-color: #000;
+            position: relative;
+            margin: 0 20px;
+        }
+
+        .vertical-line::before,
+        .vertical-line::after,
+        .vertical-line .center-dot {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #000;
+            border-radius: 50%;
+            left: -4px;
+        }
+
+        .vertical-line::before {
+            top: -15px; /* Position du point en haut */
+        }
+
+        .vertical-line::after {
+            bottom: -5px; /* Position du point en bas */
+        }
+
+        .vertical-line .center-dot {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .top-left-text {
+            position: absolute;
+            top: -20px;
+            left: 450px;
+            font-size: 18px;
+            color: #000;
+        }
+
+        .top-left-text h1 {
+            margin-left: 20px;
+        }
+
+        .bottom-right-text {
+            position: absolute;
+            top: 50%;
+            right: 600px;
+            transform: translateY(-50%);
+            font-size: 18px;
+            color: #000;
+        }
+
+        .bts {
+            margin-left: 110px;
+        }
+
+        .service {
+            margin-left: -150px;
+        }
+
+        .spe {
+            margin-left: -130px;
+        }
+
+        .suite {
+            margin-left: 30px;
+        }
+
+        .bottom-right-text {
+            margin-top: 150px;
+        }
+
+        .bac {
+            margin-right: 80px;
+        }
+
+        .ecole {
+            margin-right: -5px;
+        }
+
+        .service1 {
+            margin-right: -10px;
+        }
+
+        .suite1 {
+            margin-right: 130px;
+        }
+
+        .bottom-right-text {
+            margin-right: -150px;
+        }
+
+        .bottom-right-text h1 {
+            margin-right: 35px;
+        }
+
+        .scientfq {
+            margin-right: 135px;
+        }
+
+        .bottom-right-text h1,
+        .bottom-right-text p {
+            text-align: right;
+        }
+
+        .bottom-right-image {
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .bottom-right-image img {
+            max-width: 100px; /* Adjust the size as needed */
+        }
+
+        .parcours header h1 {
+            font-size: 20px;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Parcours Scolaire</a></li>
+                <li><a href="#">Compétences</a></li>
+                <li><a href="nvx_projet.html">Projets</a></li>
+                <li><a href="nvx_contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--<div class="video-background">
+        <video autoplay muted loop id="bgVideo">
+            <source src="videos.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>-->
+    <main>
+        <div class="h1p">
+            <h1>I'm 16-years-old, I'm <span>Ismael Halima</span></h1>
+            <div class="text-animate">
+                <h3>1er année BTS SIO</h3>
+            </div>
+            <br>
+            <p>Actuellement étudiante en première année de BTS SIO, je suis passionné par l'informatique.</p>
+                <p>Mais, mes ambitions ne se limitent pas qu'à être une experte en informatique.</p>
+            <p>Je rêve de créer ma propre entreprise, </p>
+            <p>Une entreprise qui repousse les limites de l'innovation et 
+                qui apporte des solutions novatrices <br>aux défis auxquels notre société est confrontée.
+                <p>Et aussi je veux également devenir une PDG,</p>
+                Une leader qui inspire les autres à poursuivre leurs rêves et à croire en leur potentiel.</p><br><br>
+            <a href="tout_projet.html">Découvrir mon travail</a>
+        </div>
+        <br><br><br><br><br><br>
+        <div class="content">
+            <div class="image-container">
+                <img src="img/img.jpeg" alt="Sample Image">
+            </div>
+            <div class="line-and-text">
+                <hr>
+                <h2>Ismael Halima</h2>
+                <p>Étudiante en BTS SIO option SLAM</p>
+                <p>(Solutions Logicielles et Applications Métiers)</p><br>
+                <a href="file:///C:/Users/moina/OneDrive/Bureau/jeux/cv.pdf">Mon CV</a>
+            </div>
+        </div>
+    </main><div class="image">
+        <img src="aprpr.jpeg">
+    </div>
+    <section id="parcours" class="parcours">
+        <header>
+            <h1>Parcours Scolaire</h1>
+        </header>
+        <div class="content">
+            <div class="top-left-text">
+                <h1 id="...">2023 - 2024</h1><br>
+                <p class="bts">BTS SIO</p><br>
+                <p>Diderot Education, Lyon</p><br>
+                <p class="service">BTS Service Informatique aux Organisations</p><br>
+                <p class="spe">Spécialité SLAM (Solutions Logicielles et<br><br> Applications Métiers)</p>
+            </div>
+            <div class="vertical-line">
+                <div class="center-dot"></div>
+            </div>
+            <div class="bottom-right-text">
+                <h1>2022 - 2023</h1><br>
+                <p class="bac">Baccalauréat</p><br>
+                <p class="ecole">Albert Camus, Comores</p><br>
+                <p class="service1">Baccalauréat Scientifique</p><br>
+                <p class="scientfq">BAC C</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <ul>
+            <li><a href="test.html"><ion-icon name="school-outline" style="font-size: 30px;"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="library-outline" style="font-size: 30px;"></ion-icon></a></li>
+            <li><a href="#"><ion-icon name="desktop-outline" style="font-size: 30px;"></ion-icon></a></li>
+            <li><a href="nvx_projet.html"><ion-icon name="business-outline" style="font-size: 30px;"></ion-icon></a></li>
+        </ul>
+    </footer>
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
