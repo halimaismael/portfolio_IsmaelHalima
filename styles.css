@@ -1,0 +1,575 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px; /* Réduire un peu le padding pour un header plus compact */
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000; /* Assurer que le header est au-dessus du reste du contenu */
+}
+
+.top-left p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav-list li a {
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 60px); /* Adjust height considering header height */
+}
+
+.left-half {
+    z-index: 1;
+    margin-top: 190px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative; /* To position the pseudo-element */
+}
+
+.left-half img {
+    margin-top: 50px;
+    margin-bottom: -20px;
+    width: 70%;
+    border: 5px solid #8B4513; /* Couleur chocolat pour la bordure */
+    border-radius: 50%; /* Pour un effet rond */
+    box-shadow: 0 0 20px rgba(139, 69, 19, 0.5); /* Ombre chocolat */
+    animation: floatUpDown 3s ease-in-out infinite; /* Animation de montée et descente */
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.right-half {
+    margin-top: 100px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.right-half h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.right-half h2 {
+    margin: 10px 0 0;
+    font-size: 24px;
+    color: #555;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn-telecharger {
+    background-color: #fff;
+    color: #8B4513;
+}
+
+.btn-telecharger:hover {
+    background-color: #8B4513;
+    color: #fff;
+    
+}
+
+.btn-savoir-plus {
+    background-color: #8B4513;
+    color: #fff;
+}
+
+.btn-savoir-plus:hover {
+    background-color: #fff;
+    color: #8B4513;
+}
+
+.icon {
+    margin-top: 30px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+}
+
+.icon-container img {
+    width: 30px; /* Ajuster la taille au besoin */
+    height: 30px;
+    margin: 0 10px;
+}
+#copetance h1{
+    font-size: 30px;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Ajustez selon vos préférences */
+    margin-bottom: 10px; /* Espace en bas du titre */
+}
+
+#copetance h1::after,
+#copetance h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%; /* Largeur du premier trait */
+    left: 0px;
+    height: 2px; /* Épaisseur du trait */
+    background-color: #8B4513; /* Couleur chocolat */
+}
+
+#copetance h1::after {
+    left: 0;
+}
+
+#copetance h1::before {
+    left: 2px;
+    width: 30%; /* Largeur du deuxième trait (plus petit) */
+}
+
+#copetance {
+    padding: 80px 20px;
+    margin-top: 60px; /* Assure un espace entre la section précédente et celle-ci */
+}
+
+#copetance h1 {
+    padding: 20px 0;
+    font-size: 30px;
+    font-style: italic;
+    float: left;
+}
+
+#copetance main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 2rem;
+}
+
+.card {
+    position: relative;
+    width: calc(30% - 2rem); /* Calculer la largeur avec la marge */
+    margin: 1rem;
+    overflow: hidden; /* Assurer que l'image est bien coupée */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition pour l'effet de survol */
+}
+
+.card img {
+    border: 1px solid black;
+    border-right: 1px solid black;
+    box-shadow: #fff;
+    height: 300px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.8); /* Ombre blanche au survol */
+}
+
+.card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(139, 69, 19, 0.644); /* Couleur de fond transparente avec ombre chocolat */
+    opacity: 0;
+    transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Aligner le texte en colonne */
+    padding: 20px;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.text {
+    font-style: italic;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+}
+
+.card:hover .text {
+    transform: translateY(0); /* Faire remonter le texte au survol */
+}
+
+.card .text + .text {
+    margin-top: 10px; /* Ajouter un espace entre les deux paragraphes */
+}
+
+.card:hover img {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); /* Ombre autour de l'image de couleur blanche */
+}
+
+#projects {
+    margin-top: 1190px;
+    padding: 80px 20px;
+}
+#projects h1{
+    font-size: 30px;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Ajustez selon vos préférences */
+    margin-bottom: 10px; /* Espace en bas du titre */
+}
+
+#projects h1::after,
+#projects h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%; /* Largeur du premier trait */
+    left: 0px;
+    height: 2px; /* Épaisseur du trait */
+    background-color: #8B4513; /* Couleur chocolat */
+}
+
+#projects h1::after {
+    left: 0;
+}
+
+#projects h1::before {
+    left: 2px;
+    width: 30%; /* Largeur du deuxième trait (plus petit) */
+}
+
+.projects-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+#projects h1{
+    margin-top: -50px;
+    padding: 20px 0;
+    font-size: 30px;
+    font-style: italic;
+    float: left;
+}
+
+.projects-list li a {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+}
+
+.projects-list li a:hover {
+    padding: 15 20px;
+    color: #8B4513;
+    border: 1px solid black;
+    box-shadow: #8B4513;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.projects-grid .project-item {
+    
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    transition: background-color 0.3s ease;
+}
+
+.projects-grid {
+    margin-left: 70px;
+    margin-right: 70px;
+    height: 250px;
+}
+
+.projects-grid .project-item img {
+    width: 100%;
+    display: block;
+    height: 250px;
+}
+
+/* Section des projets */
+#projects {
+    margin-top: 1190px;
+    padding: 80px 20px;
+}
+
+/* Liste des projets */
+.projects-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+#projects h1 {
+    margin-top: -50px;
+    padding: 20px 0;
+    font-size: 30px;
+    font-style: italic;
+    float: left;
+}
+
+.projects-list li a {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+}
+
+.projects-list li a:hover {
+    padding: 15px 20px;
+    color: #8B4513;
+    border: 1px solid black;
+    box-shadow: #8B4513;
+}
+
+/* Grille des projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+/* Item de projet */
+.projects-grid .project-item {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid black;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects-grid .project-item img {
+    width: 100%;
+    display: block;
+    height: 250px;
+    transition: background-color 0.3s ease;
+}
+
+/* Overlay */
+.projects-grid .project-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(139, 69, 19, 0.8); /* couleur chocolat transparente */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(-100%);
+}
+
+.projects-grid .project-item:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects-grid .project-item:hover img {
+    background-color: chocolate;
+}
+
+/* Section principale */
+.main-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.main-section a {
+    text-decoration: none;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    background-color: #000;
+}
+.overlay span{
+    color:aqua;
+    font-size: 20px;
+}
+.main-section {
+    text-align: center;
+    padding: 50px 0;
+}
+.main-section a {
+    text-decoration: none;
+    margin: 0;
+    color: #fff;
+    font-size: 18px;
+    border: 1px solid #000;
+    padding: 5px 20px;
+    background-color:#8B4513;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+footer img{
+    width: 150px;
+}
+#ecris p {
+    font-style: italic;
+    font-size: 18px;
+    margin-left: 190px;
+}
+#ecris span{
+    color: #8B4513;
+    font-size: 18px;
+}
+#contact h1{
+    margin-top: -50px;
+    padding: 20px 0;
+    font-size: 30px;
+    font-style: italic;
+    float: left;
+}
+.img img{
+    margin-top: -50px;
+    width: 250px;
+}
+#contact h1{
+    margin-left: 10px;
+    font-size: 30px;
+    font-style: italic;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px; /* Ajustez selon vos préférences */
+    margin-bottom: 10px; /* Espace en bas du titre */
+}
+
+#contact h1::after,
+#contact h1::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 50%; /* Largeur du premier trait */
+    left: 10px;
+    height: 3px; /* Épaisseur du trait */
+    background-color: #8B4513; /* Couleur chocolat */
+}
+
+#contact h1::after {
+    left: 0;
+}
+
+#contact h1::before {
+    left: 2px;
+    width: 30%; /* Largeur du deuxième trait (plus petit) */
+}
+
+#contact h1, p {
+    text-align: center;
+}
+
+#contact .ecris img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    float: left;
+}
+#position {
+    width: 150px;
+    margin-top: 50px;
+}
+
+#email {
+    float: right;
+}
+
+
+
+#telephone {
+    float: left;
+}

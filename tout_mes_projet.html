@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px; /* Réduire un peu le padding pour un header plus compact */
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+    z-index: 1000; /* Assurer que le header est au-dessus du reste du contenu */
+}
+
+.top-left p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    font-size: 16px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav-list li a {
+    text-decoration: none;
+    color: #000;
+}
+.tous {
+    color: #8B4513;
+}
+        #projects {
+            margin-top: 80px; /* Réduire cette marge pour amener la section plus haut */
+            padding: 80px 20px;
+        }
+
+        #projects h1 {
+            font-size: 30px;
+            font-style: italic;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px; /* Ajustez selon vos préférences */
+            margin-bottom: 10px; /* Espace en bas du titre */
+        }
+
+        #projects h1::after,
+        #projects h1::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 50%; /* Largeur du premier trait */
+            left: 0px;
+            height: 2px; /* Épaisseur du trait */
+            background-color: #8B4513; /* Couleur chocolat */
+        }
+
+        #projects h1::after {
+            left: 0;
+        }
+
+        #projects h1::before {
+            left: 2px;
+            width: 30%; /* Largeur du deuxième trait (plus petit) */
+        }
+
+        .projects-list {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 2rem;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+        }
+
+        .projects-list li a {
+            margin-left: 50px;
+            margin-right: 50px;
+            text-decoration: none;
+            flex: 1;
+            text-align: center;
+        }
+
+        .projects-list li a:hover {
+            padding: 15px 20px;
+            color: #8B4513;
+            border: 1px solid black;
+            box-shadow: #8B4513;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding: 0 2rem;
+            margin-left: 70px;
+            margin-right: 70px;
+        }
+
+        .projects-grid .project-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid black;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .projects-grid .project-item img {
+            width: 100%;
+            display: block;
+            height: 250px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* Overlay */
+        .projects-grid .project-item .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(139, 69, 19, 0.8); /* couleur chocolat transparente */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            transform: translateY(-100%);
+        }
+
+        .projects-grid .project-item:hover .overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .projects-grid .project-item:hover img {
+            background-color: chocolate;
+        }
+        .overlay span{
+        color:aqua;
+        font-size: 20px;
+        }
+        .overlay ion-icon{
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-left">
+            <p>Halima Ismael</p>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">Présentation</a></li>
+                <li><a href="#copetance">Compétances</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="projects">
+        <h1 class="section-title">Tous mes Projets  <ion-icon name="business-outline" style="font-size: 30px;"></ion-icon></h1>
+        <!--<ul class="projects-list">
+            <li><a href="tout_projet.html">Tous</a></li>
+            <li><a href="groupe.html">Groupe</a></li>
+            <li><a href="groupe.html">Projet Personelle</a></li>
+            <li><a href="jeux.html">Jeux</a></li>
+        </ul>-->
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro1.png" alt="Project 1">
+                <div class="overlay"><p><span>Parfum Des Comores</span><br><br>Découvrez ParfumDesComores,<br> votre guide enchanteur <br>pour explorer les trésors naturels, <br>culturels et aromatiques des Comores. <br>Plongez dans un voyage inoubliable au cœur<br> des îles parfumées!<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;" onclick="redirectTo('parfum_des_comores.html')"></ion-icon></p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro2.png" alt="Project 2">
+                <div class="overlay"><p><span>SoftMarket</span><br><br>Découvrez SoftMarket,<br>une future plateforme dédiée  <br>à la vente de machines virtuelles.<br>Actuellement en développement,<br> ce projet vise à révolutionnerle marché<br> numérique.<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro3.png" alt="Project 3">
+                <div class="overlay"><p><span>VersLibérés</span><br><br>VersLibérés est une toile <br>où les pensées s'envolent en poèmes,<br> odes, et acrostiches humoristiques. <br>Écrire, c'est laisser le cœur parler,<br> non pour être lu, mais pour être compris,<br>tel un jardin secret partagé.<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro5.png" alt="Project 4">
+                <div class="overlay"><p><span>Paroles Réfléchies</span><br><br>Paroles Réfléchies est un site dédié<br> à la puissance des mots, <br>offrant une collection de citations inspirantes<br> pour nourrir l'esprit <br>et éclairer le quotidien.<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro6.png" alt="Project 5">
+                <div class="overlay"><p><span>NovaLume Style</span><br><br>NovaLume Style, <br>votre destination en ligne <br>pour des vêtements tendance<br> et élégants de la marque NovaLume.<br>Découvrez notre collection et <br>adoptez un nouveau style.<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro7.png" alt="Project 6">
+                <div class="overlay"><p><span>InsightX AI</span><br><br>InsightX AI révolutionne l'IA <br>et le numérique avec des solutions innovantes.<br>Panticiper les défis futurs <br>et transformer les industries.<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro8.png" alt="Project 6">
+                <div class="overlay"><p>My futur company</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro9.png" alt="Project 6">
+                <div class="overlay"><p><span>FruitSlash</span><br><br>FruitSlash est un jeu excitant<br>où vous tranchez des fruits avec des gestes rapides.<br>Utilisez des mouvements précis<br>pour découper divers fruits qui surgissent à l'écran.<br>Plongez dans une aventure fruitée<br> et devenez le maître du découpage !<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro10.png" alt="Project 6">
+                <div class="overlay"><p>Jeux Manga</p></div>
+                <div class="overlay"><p><span>Manga Quiz</span><br><br>Plongez dans l'univers captivant,<br> Répondez à des questions amusantes,<br> progressez à travers des niveaux passionnants<br>et découvrez des défis de plus en plus difficiles.<br>Connectez-vous pour sauvegarder votre progression,<br>consulter les meilleurs scores<br>et voir qui est le meilleur connaisseur de mangas!<br><br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro11.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de puzzle de mot</p></div>
+                <div class="overlay"><p><span>Jeux de puzzle de mot</span><br><br>plongez dans un défi palpitant<br>de complétion de mots.<br>Testez vos compétences linguistiques<br>en remplissant les espaces vides<br> avec des lettres manquantes.<br>Utilisez des boutons pour sauter<br> des questions difficiles<br>ou demander de l'aide,<br>tout en visant à atteindre le score parfait!<br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro12.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de mot croisé</p></div>
+                <div class="overlay"><p><span>CrossWord</span><br><br>défiez votre esprit avec des grilles<br>de mots croisés interactives.<br>Reliez lettre par lettre pour former des mots<br>et complétez les tableaux.<br>Mettez votre vocabulaire à l'épreuve<br>tout en résolvant des énigmes passionnantes<br>et en améliorant votre score!<br><br><ion-icon name="arrow-down-circle-outline" style="font-size: 30px;"></ion-icon></p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro17.png" alt="Project 6">
+                <div class="overlay"><p>Quiz de prog</p></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro13.png" alt="Project 6">
+                <div class="overlay"><p>MelodyKeys</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro18.png" alt="Project 6">
+                <div class="overlay"><p>Jeux de Mot Manga</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro14.png" alt="Project 6">
+                <div class="overlay"><p>VersLibérés</p></div>
+            </div>
+        </div>
+        <br><br>
+        <div class="projects-grid">
+            <div class="project-item">
+                <img src="pro15.png" alt="Project 6">
+                <div class="overlay"><p>VersLibérés & poésie Accueil</p></div>
+            </div>
+            <div class="project-item">
+                <img src="pro16.png" alt="Project 6">
+                <div class="overlay"><p>VersLibérés & poésie Accueil</p></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function redirectTo(page) {
+            window.location.href = page;
+        }
+    </script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
